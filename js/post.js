@@ -13,6 +13,25 @@ $(document).ready(() => {
 
         postCharacterInfo(walleInfo);
     });
+
+
+    $('#postCharacterForm').submit((theEvent) => {
+      // the 1st argument of any event callback (click, submit, scroll, etc.),
+      // is an "Event" object.
+
+      // Use the "Event" object to prevent
+      // the normal form submission page refresh
+        theEvent.preventDefault();
+
+        // retrieve what the user typed in the inputs (the input values)
+        const characterInfo = {
+          name: $('#postCharacterName').val(),
+          occupation: $('#postCharacterOccupation').val(),
+          weapon: $('#postCharacterWeapon').val()
+        };
+
+        postCharacterInfo(characterInfo);
+    });
 });
 
 
