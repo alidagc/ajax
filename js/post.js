@@ -32,6 +32,24 @@ $(document).ready(() => {
 
         postCharacterInfo(characterInfo);
     });
+
+
+    $('#updateForm').submit((theEvent) => {
+        theEvent.preventDefault();
+
+        // retrieve what the user typed in the inputs (the input values)
+        const updatedInfo = {
+          name: $('#updateName').val(),
+          weapon: $('#updateWeapon').val(),
+          occupation: $('#updateOccupation').val()
+        };
+
+        // retrieve the character id from the input
+        const characterId = $('#updateCharacterId').val();
+
+        // call the function that makes the AJAX request
+        updateCharacter(characterId, updatedInfo);
+    });
 });
 
 
