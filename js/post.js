@@ -53,6 +53,33 @@ $(document).ready(() => {
 });
 
 
+
+
+function updateCharacter (myId, newInfo) {
+    $.ajax({
+      url: 'https://ih-api.herokuapp.com/characters/' + myId,
+      method: 'PATCH',
+
+      // the "data" setting is only used
+      // when you need to send extra info to the API
+      data: newInfo,
+          // "newInfo" is an object that contains:
+          // "name", "occupation" & "weapon" properties
+
+      success: (responseFromApi) => {
+          alert('UPDATE SUCCESS! 😺');
+          console.log(responseFromApi);
+      },
+      error: (errorFromApi) => {
+          alert('Sorry! Update error. 😤');
+          console.log(errorFromApi);
+      }
+    });
+}
+
+
+
+
 function postCharacterInfo (newCharacterDetails) {
   // Post data to the characters API
   $.ajax({  // 1st argument -> giant settings object
