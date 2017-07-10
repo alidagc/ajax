@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> AJAX Examples </title>
+  </head>
+  <body>
+    <header>
+      <h1> AJAX Examples </h1>
+
+      <nav>
+        <a href="index.html"> Home </a>
+        <br>
+      </nav>
+    </header>
+
+    <!-- this <p> tag will be filled by the JS -->
+    <p id="pokeInfo"></p>
+    <button id="pokeButton">Get Pokemon!</button>
+
+
+    <!-- ID on the form to use <form> .submit() event instead of .click() -->
+    <form id="pokeSearchForm">
+      <label for="pokemonId"> Choose a Pokemon ID </label>
+      <input  id="pokemonId" type="number" placeholder="77">
+      <br>
+
+      <button> Search </button>
+    </form>
+
+
+    <footer>
+      <p> Made with 💖 at Ironhack. </p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="js/get.js"></script>
+  </body>
+</html>
